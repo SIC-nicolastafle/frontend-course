@@ -1,7 +1,150 @@
 h3{
+    /* Style geral para todas as tags <h3>*/
     color: purple;
     font-size: 45px;
     padding: 20px;
 }
 
-button
+/* Comentários em CSS */
+
+/* Classes */
+/* Diferente com a definição das tags tem de ser definida com .<class-name> */
+
+.paragraph {
+    color : green;
+    font-size: 28;
+    padding: 25px;
+    text-align: right;
+}
+
+/* Id são atributos para definir um elemento ÚNICO com #<id-unico>*/
+
+#exclusive-title {
+    background-color: black;
+    color: yellow;
+}
+
+/* Ordem de regras Id > Class > Tag */
+
+h2 {
+    border-bottom: 1px solid red;
+}
+
+.title {
+    border-bottom: 3px solid blue;
+}
+
+#primary-title {
+    border-bottom: 5px solid green;
+}
+
+/* color-name */
+
+.color-name {
+    color: DodgerBlue;
+}
+
+.second-color-name {
+    color: Tomato;
+}
+
+/* Colors by HEX */
+.hex {
+    color: #3c4e67;
+}
+
+.hex-2 {
+    color: #5e3c67;
+}
+
+/* RGB */
+.rgb {
+    color: rgb(255, 0, 0);
+}
+
+.mixed-rgb  {
+    color: rgb(105, 87, 20)
+}
+
+/* RGBA permite controlar a opacidade */
+.rgba {
+    color: rgba(105, 87, 20, 0.6);
+}
+
+.rgba-transp {
+    color: rgba(105, 87, 20, 0.2);
+}
+
+/* HSL */
+.hsl {
+    color: hsl(100, 35%, 60%);
+}
+
+.hsl-2 {
+    color: hsl(168, 90%, 40%);
+}
+
+.hsla {
+    color: hsla(168, 90%, 40%, 0.3);
+}
+
+/* backgound-color */
+.bg {
+    background-color: hsl(100, 35%, 60%);
+    color: rgba(190, 35, 80, 0.7);
+}
+
+.bg-2 {
+    background-color: rgba(105, 87, 20, 0.2);   /* Com rgba consigo controlar a opacidade sem o parâmetro opacity */
+    color: rgb(200, 40, 200);
+}
+
+/* Opacity */
+.bg-opacity {
+    background-color: #df0d0d;
+    opacity: 0.8;
+    color: #150ddf;
+}
+
+/* Background with Image */
+.bg-img {
+    text-align: center;
+    background-image: url("../img/stars.jpg");
+}
+
+/* Centralize Background Img */
+.bg-centered, .bg-not-centered {
+    width: 400px;
+    height: 400px;
+    background-image: url("../img/MT-09.jpg")
+}
+
+.bg-centered {
+    background-position: center; /* Centraliza a imagem de fondo */
+}
+
+.bg-not-centered {
+    background-size: cover;  /* Tenta cobrir o máximo possível com a imagem */
+}
+
+/* Width & Height */
+.width-height {
+    width: 150px;
+    height: 300px;
+    background-color: red;
+}
+
+.not-width {
+    height: 250px;
+    background-color: green;
+}
+
+.not-padding, .padding {
+    background-color: black;
+    color: red;
+}
+
+.padding {
+    border: 5px solid green;
+    padding: 35px;
+}
