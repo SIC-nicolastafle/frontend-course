@@ -139,6 +139,8 @@ h2 {
     background-color: green;
 }
 
+/* Padding */
+
 .not-padding, .padding {
     background-color: black;
     color: red;
@@ -147,4 +149,48 @@ h2 {
 .padding {
     border: 5px solid green;
     padding: 35px;
+}
+
+/* Padding por Lado */
+.indiv-padding {
+    border: 3px solid red;
+    background-color: rgb(187, 150, 100);
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 120px;
+    padding-bottom: 35px;
+}
+
+/* All Padding InOne */
+.shorthand-padding {
+    border: 2px solid blue;
+    color: yellow;
+    padding: 120px 50px 210px 100px;
+}
+
+.shorthand-padding-2 {
+    border: 2px solid yellow;
+    color: blue;
+    padding: 50px 100px;
+    /* igual que */
+    /* padding: 50px 100px 50px 100px;*/
+}
+
+/* Border-Box */
+/* Com a regra box-sizing: border-box HTML faz que a largura da caixa seja respeitada (width).
+ Caso contrario o elemento vai ter tamanho = width + padding */
+
+.without-border-box {
+    background-color: #666;
+    color: #fff;
+    width: 300px;
+    padding: 50px;
+}
+
+.border-box {
+    background-color: #333;
+    color: #666;
+    width: 300px;
+    padding: 50px;
+    box-sizing: border-box;
 }
