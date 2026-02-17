@@ -139,7 +139,7 @@ h2 {
     background-color: green;
 }
 
-/* Padding */
+/* Padding - Part of the structure */
 
 .not-padding, .padding {
     background-color: black;
@@ -193,4 +193,169 @@ h2 {
     width: 300px;
     padding: 50px;
     box-sizing: border-box;
+}
+
+/* Border - Part of the Structures */
+
+.border {
+    border: 6px solid green;
+}
+
+.border-2 {
+    border: 6px dotted blue;
+}
+
+.border-style {
+    border-style: solid dotted;
+    padding: 3px;
+}
+
+/* Border individual Sides*/
+.border-right {
+    border-right: 3px solid red;
+    background-color: #6632;
+    padding: 20px;
+}
+
+/* Border Rounded */
+.border-radius {
+    border: 5px solid black;
+    padding: 25px;
+    text-align: center;
+    background-color: blue;
+    color: #EEEE;
+    border-radius: 15px;
+}
+
+/* Display */
+.inline-box {
+    color: green;
+    background-color: black;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.display-list {
+    color: black;
+    background-color: green;
+    padding: 5px;
+    margin: 10px;
+    display: list-item;
+}
+
+/* Esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Positions */
+.static {
+    background-color: #249;
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid red;
+    position: static;
+}
+
+.relative {
+    background-color: #871;
+    color: black;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid red;
+    position: relative;
+    top: 100px;
+    right: 15px;
+}
+
+.absolute {
+    background-color: #5555;
+    color: blue;
+    height: 50px;
+    width. 75px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid red;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.container-relative {
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 90px 20px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.absolute-box,
+.absolute-box1{
+    background-color: red;
+    width: 25px;
+    height: 25px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.absolute-box1 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.fixed-top {
+    background-color: green;
+    border: 1px solid white;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.sticky-button {
+    border-radius: 15px;
+    background: black;
+    color:white;
+    padding: 5px;
+    position: sticky;
+    top: 50px;
+}
+
+/* Z-Index */
+.absolute-box2 {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
+.absolute-box3 {
+    background-color: blue;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 2;
+}
+
+.absolute-box4 {
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 1;
 }
