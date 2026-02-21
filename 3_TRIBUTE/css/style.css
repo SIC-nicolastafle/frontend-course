@@ -1,6 +1,13 @@
-.body {
-    background-color: grey;
-    padding: 30px 15px;
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/background-papota.jpeg');
 }
 
 .title-box {
@@ -13,26 +20,34 @@
     text-align: center;
 }
 
+.text-box {
+    background-color: white;
+    margin: 10px 60px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
 
+.paragraph {
+    font-size: 25px;
+    font-family: sans-serif;
+}
 
-
-
-
+.last {
+/* this class if for the element just before footer */
+    flex: 1;
+}
 
 /* FOOTER */
 .footer-container {
+    width: 100%;
     background-color: black;
-    padding: 20px;
+    padding: 10px;
     text-align: end;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
     font-family: sans-serif;
     font-size: 20px;
 }
 
 .footer-link {
-    margin: 15px;
     padding: 15px;
 }
