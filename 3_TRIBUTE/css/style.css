@@ -1,0 +1,14 @@
+.body {
+    background-color: grey;
+    padding: 30px 15px;
+}
+
+.title-box {
+    padding: 10px;
+    text-align: center;
+}
+
+.image-container {
+    border: 0.5px solid grey;
+    text-align: center;
+}
