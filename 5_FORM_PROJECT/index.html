@@ -1,29 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Vende a sua Bike</title>
+    <title>Product Form</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h3>Venda a sua Bicicleta</h3>
+            <h3>Venda de tudo</h3>
         </div>
         <div class="form-container">
             <form>
                 <div class="form-header">
-                    <p>Formulário</p>
+                    <p>Formulário do Artigo</p>
                 </div>
                 <div class="form-body">
                     <div class="box-input">
-
+                        <label for="name">Nome do Artigo <span class="required-field">*</span></label>
+                        <br>
+                        <input type="text"
+                               name="name"
+                               placeholder="Defina um nome para o seu artigo"
+                               required>
                     </div>
-                </div>
-                <div class="box-input">
-                    <label for="brand">Marca</label>
-                    <br>
-                    <input type="checkbox" name="" id="">
+                    <div class="box-radio">
+                        <label for="category">Categoria</label>
+                        <br>
+                        <input type="radio"
+                               name="category"
+                               value="home">
+                        <label for="home">Casa</label>
+                        <br>
+                        <input type="radio"
+                               name="category"
+                               value="vehicle">
+                        <label for="vehicle">Viatura</label>
+                        <br>
+                        <input type="radio"
+                               name="category"
+                               value="sport">
+                        <label for="sport">Desporto</label>
+                    </div>
+                    <div class="box-input">
+                        <label for="description">Descrição <span class="required-field">*</span></label>
+                        <br>
+                        <textarea name="description" placeholder="Defina o que está a vender" required></textarea>
+                    </div>
+                    <div class="box-input">
+                        <p>Imagens do seu produto</p>
+                        <input type="file" multiple accept="image/png, /image/jpg">
+                    </div>
+                    <div class="box-input">
+                        <label for="price">Preço <span class="required-field">*</span></label>
+                        <br>
+                        <input type="number" name="price" required>
+                    </div>
+                    <div class="box-extra">
+                        <p>Extras</p>
+                        <ul class="list-extra">
+                            <li>
+                                <input type="checkbox" name="extra[]" value="free_shipping">
+                                <label for="free_shipping">Envio de graça</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="extra[]" value="guarranty">
+                                <label for="guarranty">Garantia</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="extra[]" value="second_hand">
+                                <label for="second_hand">Segunda mão</label>
+                            </li>
+                        </ul>
+                    </div><div class="box-extra">
+                        <ul class="list-extra">
+                            <li>
+                                <input type="checkbox" name="extra[]" value="inmediaty_shipping">
+                                <label for="inmediaty_shipping">Entrega na hora</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="extra[]" value="fragile">
+                                <label for="fragile">Frâgil</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="extra[]" value="no_negociabel">
+                                <label for="no_negociabel">Preço fixo</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <input type="submit" value="Publicar" class="btn-submit">
+                    </div>
                 </div>
             </form>
         </div>
