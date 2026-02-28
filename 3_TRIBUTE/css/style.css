@@ -54,17 +54,22 @@ h3 {
 }
 
 .album-container {
-    margin: 25px 0px;
-    padding: 25px 0px;
+    margin: 25px;
+    padding: 30px;
     font-size: 20px;
 }
 
+li {
+    margin:15px;
+}
+
 .quotes-container {
-    margin: 25px 25px;
-    padding 10px 10px;
+    margin: 25px;
+    padding 20px;
     background-color: rgba(150, 150, 150, 20%);
     border-radius: 15px;
 }
+
 
 .last {
 /* this class if for the element just before footer */
