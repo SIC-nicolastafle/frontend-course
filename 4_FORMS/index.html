@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Formulários HTML</h1>
+    <!-- Form sem atributo -->
+    <!--form>
+        <label>Nome:
+            <input/>
+        </label>
+    </form-->
+
+        <!-- Form com atributo -->
+    <form action="register.php" method="POST">
+        <div class="">
+            <label>Nome:</label>
+            <input/>
+        </div>
+        <br>
+
+        <!-- input atributo name (variável)-->
+        <div class="">
+            <label for="age">Idade:</label>
+            <input type="number" name="age"/>
+        </div>
+        <br>
+
+        <!-- Select -->
+        <div class="">
+            <label for="job">Job:</label>
+            <select name="job" >
+                <option value="" selected></option>
+                <option value="coder">Programador</option>
+                <option value="fnt-end">Front-End</option>
+                <option value="quality">QA</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Atributo Selected -->
+        <div>
+            <label for="contract">Você leu os termos e condições?</label>
+            <select name="job" >
+                <option value="yes">Sim</option>
+                <option value="no" selected>Não</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Multiplas opções selecionadas tag multiple -->
+        <div>
+            <label for="items">Selecione os items desejados</label>
+            <br>
+            <select name="items" multiple>
+                <option value="apple">Maça</option>
+                <option value="lemon">Limão</option>
+                <option value="orange">Laranja</option>
+                <option value="acai">Açai</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Tag textarea -->
+        <div>
+            <label for="comment">Deixe o seu comentario</label>
+            <br>
+            <textarea name="comment"cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        
+        <!-- Tags fieldlabel e legend -->
+        <div>
+            <fieldset>
+                <legend>Preencha as suas informações</legend>
+                <div><label for="name">Name:</label>
+                <input type="text">
+                </div>
+                <br>
+                <div>
+                <label for="last_name">Last Name:</label>
+                <input type="text">
+                </div>
+            </fieldset>
+        </div>
+        <br>
+
+        <!-- Tag datalist -->
+        <div>
+            <label for="flavours">Escolha o seu sabor de sorvete</label>
+            <input type="text" list="flavours" name="flavours">
+
+            <datalist id="flavours">
+                <option value="Hortelã"></option>
+                <option value="Chocolate"></option>
+                <option value="Vaunilha"></option>
+                <option value="Caramel"></option>
+            </datalist>
+        </div>
+        <br>
+
+        <!-- Password -->
+        <div>
+            <label for="password">Defina a sua senha</label>
+            <input type="password">
+        </div>
+
+        <!-- Radius Selection -->
+        <div>
+            <label for="car_select">Escolha a sua Marca favorita</label>
+            <div class="radio">
+                <input type="radio" value="honda" name="car_select">
+                <label for="honda">Honda</label>
+                <br>
+                <input type="radio" value="bmw" name="car_select">
+                <label for="bmw">BMW</label>
+                <br>
+                <input type="radio" value="porsche" name="car_select">
+                <label for="porsche">Porsche</label>
+                <br>
+            </div>
+        </div>
+
+        <!-- Checkbox selection -->
+        <div>
+            <label for="checkbox">Selecione o seu Pais de nascimento</label>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="arg">  <!-- optionals[] permite selecionar mais de um checkbox -->
+                <label for="arg">ARG</label>
+                <br>
+                <input type="checkbox" name="optionals[]" value="br">
+                <br>
+                <input type="checkbox" name="optionals[]" value="pt">
+                <label for="pt">PT</label>
+            </div>
+        </div>
+
+        <!-- Datas -->
+        <div>
+            <label for="born_date">Data de Nascimento</label>
+            <br>
+            <input type="date" name="born_date">
+        </div>
+
+        <!-- Input File -->
+        <div>
+            <label for="img_input">Carregue uma imagem</label>
+            <br>
+            <input type="file" name="img_input">
+        </div>
+
+        <!-- Input E-mails -->
+        <div>
+            <label for="phone">Digite o seu telefone</label>
+            <br>
+            <input type="text" name="phone" value="+351 012345678">
+
+            <!-- Disable -->
+            <div>
+                <p>
+                    Tente mudar o valor
+                </p>
+                <input type="text" name="blocl" value="Tente alterar!!!" disabled>
+                <br>
+            </div>
+        </div>
+
+        <!-- Valor por defeito -->
+        <div>
+            <label for="email">Escreva o seu e-mail</label>
+            <br>
+            <input type="email" name="email">
+        </div>
+
+        <!-- Valor por defeito -->
+        <div>
+            <label for="phone">Digite o seu telefone</label>
+            <br>
+            <input type="text" name="phone" value="+351 012345678">
+        </div>
+
+        <!-- Placeholder -->
+        <div>
+            <label for="current_job">Profissão</label>
+            <input type="text" name="current_job" placeholder="Defina a sua profissão atual!!">
+        </div>
+
+        <!-- Atributo Required -->
+        <div>
+            <label for="user">User:</label>
+            <input type="text" name="user" placeholder="Escreva o seu User name" required>
+        </div>
+
+        <div>
+            <!-- Reset Form -->
+            <input type="reset" name="Limpar">
+
+            <!-- Envio do form-->
+            <input type="submit" name="Enviar"/>
+        </div>
+    </form>
+
+
+
+</body>
+</html>
