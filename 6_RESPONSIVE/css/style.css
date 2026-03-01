@@ -1,0 +1,28 @@
+h1 {
+    color: red;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        color: green;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    p {
+        background-color: blue;
+        padding: 25px;
+        border: 2px solid red;
+        transition: 0.5s;
+    }
+}
+
+h3 {
+    display: none;
+}
+
+@media screen and (orientation: landscape) {
+    h3 {
+        display: block;
+    }
+}
