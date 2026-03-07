@@ -78,3 +78,89 @@ if (name === 'Maria') {
     console.log('Olá Maria');
 }
 
+// else
+
+const loggedIn = false;
+
+if( loggedIn ) {
+    console.log('User Autenticado')
+} else {
+    console.warn('User Não Autenticado')
+};
+
+// else if
+
+const userAge = 30;
+
+if ( userAge >= 30 ) {
+    console.log('User é um adulto')
+} else if ( userAge >= 18 ) {
+    console.log('User é um jóvem')
+} else {
+    console.log('User é menor de idade')
+};
+
+
+// Estrutura de Repetição loops
+// for | while
+
+// while atúa até a condição ser atingida
+
+let p = 0;
+
+while( p < 5 ) {
+    console.log(`Valor p: ${p}`)
+    p += 1
+};
+console.log('Fim do loop while');
+
+// do while
+let o = 10;
+
+do {
+    console.log(`Valor o: ${o}`);
+    o--;
+} while ( o > 1);
+
+// for
+for (let t = 0; t < 11; t++) {
+    console.log(t)
+};
+
+
+// break
+for (let g = 10; 0 < 1; g--) {
+    console.log(`G está a disminuir`);
+    if (g === 3) {
+        console.log(`G é 13, saindo do loop`)
+        break
+    }
+}
+
+// continue
+for (let w = 0; w < 10 ; w++) {
+    if (w % 2 === 0) {
+        console.log(`${w} é par`)
+    } else {
+        continue
+    }
+}
+
+
+// switch { case - break }
+const job = 'Programador'
+
+switch ( job ) {
+    case 'Programador':
+        console.log('Vocé é Programagor');
+        break;
+    case 'Carniceiro':
+        console.log('Vocé é Carneceiro');
+        break
+    case 'Advogado':
+        console.log('Vocé é Advogado');
+        break
+    default:
+        console.log('Profissão não encontrada');
+}
+
