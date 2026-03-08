@@ -106,4 +106,31 @@ repeatText('Sem repeat');
 repeatText('Com repeat', 6);
 
 
-// Clouser
+// Recursion
+const untilTen = (n, m) => {
+    if (n < 10) {
+        console.log('A função parou');
+    } else {
+        const x = n - m;
+
+        console.log(x);
+
+        untilTen(x, m);
+    }
+};
+
+untilTen(120, 8);
+
+function factorial(x) {
+    if (x === 0) {
+        return 1;
+    } else {
+        return x * factorial(x -1);
+    };
+}
+
+const num = 7
+
+const res = factorial(num)
+
+console.log(`Factorial do num ${num} é ${res}`)
