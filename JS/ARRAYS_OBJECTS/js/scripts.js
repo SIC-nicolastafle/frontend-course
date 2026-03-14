@@ -148,3 +148,76 @@ console.log(elements[1]);
 console.log(elements[elements.indexOf('lemon')]);
 
 console.log(elements.lastIndexOf('lemon'));     //devolve última ocorrência de um elemento repetido num array
+
+
+// forEach
+const nums = [1,2,3,4,5,6,7];
+
+nums.forEach((numero) => {
+    console.log(`O número é ${numero}`)
+});
+
+const posts = [
+    {'title': 'First post', 'category': 'Python'},
+    {'title': 'Second post', 'category': 'JavaScript'},
+    {'title': 'Third post', 'category': 'HTML'},
+];
+
+posts.forEach((post) => {
+    if (post.category === 'JavaScript') {
+        console.log('Categoria JavaScript existe no array')
+    };
+});
+
+
+// includes
+
+
+
+// padStart & padEnd
+const testPad = '1';
+
+const newNumber = testPad.padStart(5,'0');  //adiciona valores no incio da string
+
+console.log(newNumber);
+
+const endNumber = testPad.padEnd(8,'0');    //adiciona valores no fim da string
+
+console.log(endNumber);
+
+// split
+const frase = 'This is a frase'
+
+const splitFrase = frase.split(' ');
+
+console.log(splitFrase);
+
+// join
+const joinFrase = splitFrase.join('-')
+
+console.log(joinFrase);
+
+// repeat
+const word = 'Testing ';
+
+console.log(word.repeat(3));
+
+// Rest Operator ...
+// permite receber indefinidos argumentos em uma função
+
+const somaInfinita = (...args) => {
+
+    let total = 0;
+
+    for (let i=0; i < args.length; i++) {
+        total += args[i];
+    }
+
+    return total;
+};
+
+console.log(somaInfinita(2,2,4,5));
+console.log(somaInfinita(2,2,4,5));
+
+
+
