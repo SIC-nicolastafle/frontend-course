@@ -93,9 +93,8 @@ console.log()
 console.log(footer.clientWidth)
 console.log(footer.clientHeight)
 
-
-// Posição de um elemento
-// getClientBound
+// getBoundingClientRect
+// permite trazer os atributos de um elemento
 const product1 = products[0]
 
 console.log(product1.getBoundingClientRect())

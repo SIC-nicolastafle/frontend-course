@@ -1,0 +1,4 @@
+Os eventos são ações atreladas a algum comportamentso do usuário, por exemplo: click, alguma tecla, movimento da tela e mouse.
+Podemos inserir logica quando estes eventos ocorromen.
+Pode disparar eventos em certos elementos
+Estas técnica é conhecida como event handler
