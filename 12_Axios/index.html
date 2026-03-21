@@ -7,13 +7,28 @@
     <title>Axios</title>
     <!-- AXIOS para fazer requests http -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Global Instance -->
+    <!--script src="js/global.js"></script-->
+    <!-- Custom Instance -->
+    <script src="js/custom.js"></script>
+    <script src="js/interceptors.js"></script>
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <h1>Axios</h1>
-<!-- dados inseridos -->
+    <!-- POST -->
+    <h2>Insira um Post</h2>
+    <form id="post-form">
+        <div class="">
+            <input type="text" id="title" placeholder="Digite um titulo">
+        </div>
+        <div class="">
+            <textarea id="body"></textarea>
+        </div>
+        <input type="submit" value="Criar Post">
+    </form>
+    <!-- GET & display data -->
     <div id="user-container">
-
     </div>
 </body>
 </html>
