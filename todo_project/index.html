@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Scripts-->
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+<div id="todo-container">
+    <header>
+        <h1>Todo List</h1>
+    </header>
+    <form>
+        <div class="form-control" id="input-form">
+            <p>Add a task to do</p>
+            <input type="text" id="task-input" placeholder="Do Shopping">
+            <button id="add-btn"> <i class="fas fa-plus"></i></button>
+        </div>
+        <div class="form-control hide" id="edit-form">
+            <p>Edit your task</p>
+            <input type="text" id="edit-input" placeholder="Do Exercise">
+            <button id="edit-btn"> <i class="fas fa-edit"></i></button>
+            <div>
+                <button id="cancel-edit-btn">Cancel <i class="fas fa-cancel"></i> </button>
+            </div>
+        </div>
+        <div class="toolbar">
+            <div id="search-container">
+                <h3>Search</h3>
+                <div id="search-form">
+                <input type="text" placeholder="Exercise">
+                <button id="search-btn"> <i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div id="filter-container">
+                <h3>Filter by:</h3>
+                <select name="filter" id="filter">
+                    <option value="All">All</option>
+                    <option value="Done">Done</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Cancel">Cancel</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <div id="todo-list">
+        <div class="task">
+                <h4>Task Name</h4>
+                <button id="end-btn"><i class="fas fa-check"></i></button>
+                <button id="edit-list-btn"><i class="fas fa-edit"></i></button>
+                <button id="cancel-btn"><i class="fas fa-cancel"></i></button>
+        </div>
+        <div class="task done">
+            <h4>Task Name 2</h4>
+            <button id="end-btn"><i class="fas fa-check"></i></button>
+            <button id="edit-list-btn"><i class="fas fa-edit"></i></button>
+            <button id="cancel-btn"><i class="fas fa-cancel"></i></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

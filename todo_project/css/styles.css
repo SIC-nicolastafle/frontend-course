@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Heebo", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d1e33;
+    color: #cccccc;
+}
+
+#cancel-edit-btn:hover {
+    background-color: #df0d0d;
+    color: #1d1d1d;
+}
+
+#todo-container {
+    background-color: #ffffff;
+    opacity: 85%;
+    margin: 5% auto;
+    padding: 1rem;
+    max-width: 80vh;
+    border-radius: .8rem;
+}
+
+header {
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 2px solid #3c4e67;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: flex;
+    margin-bottom: .4rem;
+}
+
+.form-control input,
+.form-control button {
+    padding: .2rem .5rem;
+    margin-left: .4rem;
+    margin-bottom: .4rem;
+}
+
+.toolbar {
+    border-top: 1px solid #3c4e67;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+h3 {
+    font-weight: bold;
+    margin: .2rem .4rem;
+}
+
+.toolbar input,
+.toolbar button,
+.toolbar select {
+    padding: .2rem .5rem;
+    margin-left: .4rem;
+    margin-bottom: .4rem;
+}
+
+#search-form {
+    display: flex;
+}
+
+#filter-container {
+    padding-right: 1rem;
+}
+
+#todo-list {
+    display: block;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .2rem;
+    border-bottom: 0.5px solid #3c4e67;
+}
+
+.task h4 {
+    flex: 1;
+}
+
+.task button {
+    text-align: center;
+    padding: .2rem .5rem;
+    margin-left: .4rem;
+    margin-bottom: .4rem;
+    transition: .4s;
+}
+
+#end-btn:hover {
+    background-color: #12db34;
+    color: #1d1d1d;
+}
+
+#cancel-btn:hover {
+    background-color: #df0d0d;
+    color: #1d1d1d;
+}
+
+
+.hide {
+    display: none;
+}
+
+.done {
+    background-color: #3c4e67;
+    color: #1d1d1d;
+    text-decoration: line-through;
+    font-style: italic;
+    border-radius: 5px;
+}

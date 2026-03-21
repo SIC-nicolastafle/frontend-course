@@ -22,18 +22,27 @@ checkNumber('78');
 // exception
 const t = 23;
 
+/*
 if (t > 15) {
-    exception.(console.log('This is an error!!'))
-}
-
-
+ /*
+    throw new Error('This is an error!!')
+}*/
 
 // try & catch
-
-
+try {
+    console.loga('ola' * 'text')
+} catch (error) {
+    console.log(`Error: ${error}`)
+}
 
 // try & catch & finally
-
-
+try {
+    console.logi('error de escrita')
+} catch (error) {
+    console.log(`Error capturado no catch\n${error}`)
+} finally {
+    console.log('Lógica continua e finaliza!!')
+}
 
 // assertions
+
