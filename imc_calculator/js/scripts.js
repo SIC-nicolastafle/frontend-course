@@ -39,16 +39,29 @@ const data = [
 
 // Elements
 const imcTable = document.querySelector('#imc-table');
+
 const heightInput = document.querySelector('#height');
 const weightInput = document.querySelector('#weight');
 const calcBtn = document.querySelector('#calc-btn');
 const clearBtn = document.querySelector('#clean-btn');
 
+const imcNumber = document.querySelector('#imc-number span');
+const imcInfo = document.querySelector('#imc-info span');
+
+const backBtn = document.querySelector('#back-btn');
+
+const containerResult = document.querySelector('#result-container');
+const containerCalc = document.querySelector('#calc-container');
+
 // Debug
+console.log('imcTable:', imcTable);
 console.log('heightInput:', heightInput);
 console.log('weightInput:', weightInput);
 console.log('calcBtn:', calcBtn);
 console.log('clearBtn:', clearBtn);
+console.log('imcNumber:', imcNumber);
+console.log('imcInfo:', imcInfo);
+
 
 // Functions
 function createTable(data) {
@@ -79,17 +92,31 @@ function createTable(data) {
 function cleanInputs() {
     heightInput.value = '';
     weightInput.value = '';
+    imcInfo.classList = '';
+    imcNumber.classList = '';
 }
 
 function validDigits(text) {
     return text.replace(/[^0-9,]/g, '');
 }
 
+function calcImc(weight, height) {
+    const imc = (weight / (height * height)).toFixed(1);        // apenas um decimal
+    return imc;
+}
+
+function showOrHideResult() {
+    containerResult.classList.toggle('hide');       // toggle => ativa ou desativa uma classList
+    containerCalc.classList.toggle('hide');
+}
+
 // Inicialization
 createTable(data)
 
 // Events
-[heightInput, weightInput].forEach((el) => {
+const elem = [heightInput, weightInput]
+
+elem.forEach((el) => {
     if (!el) return;
         el.addEventListener('input', (e) => {
         const updatedValue = validDigits(e.target.value);
@@ -98,10 +125,65 @@ createTable(data)
     })
 })
 
+calcBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const weight = +weightInput.value.replace(',', '.')  // mudar padrão dos numeros
+    const height = +heightInput.value.replace(',', '.')  // mudar padrão dos numeros
+
+    const imc = calcImc(weight, height)
+
+    let info;
+
+    data.forEach((item) => {
+        if (imc >= item.min && imc <= item.max) {
+            info = item.info;
+        }
+    })
+
+    if (!info) return;
+
+    imcNumber.innerText = imc
+    imcInfo.innerText = info
+
+    showOrHideResult();
+
+    switch (info) {
+        case 'Magreza':
+            imcNumber.classList.add('low');
+            imcInfo.classList.add('low');
+            break;
+        case 'Normal':
+            imcNumber.classList.add('good');
+            imcInfo.classList.add('good');
+            break;
+        case 'Sobrepeso':
+            imcNumber.classList.add('low');
+            imcInfo.classList.add('low');
+            break
+        case 'Obesidade':
+            imcNumber.classList.add('medium');
+            imcInfo.classList.add('medium');
+            break;
+        case 'Obesidade grave':
+            imcNumber.classList.add('high');
+            imcInfo.classList.add('high');
+            break;
+    }
+
+})
+
 clearBtn.addEventListener('click', (e) => {
     e.preventDefault();     // remove qualquer event por defeito nesse botão neste caso
 
     cleanInputs()
+})
+
+backBtn.addEventListener('click', (e) => {
+    e.preventDefault();     // não é precisso por estar fora do form, então não tem ação por defeito
+    cleanInputs()
+
+    showOrHideResult();
 })
 
 
