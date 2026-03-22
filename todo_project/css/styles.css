@@ -110,16 +110,15 @@ h3 {
     transition: .4s;
 }
 
-#end-btn:hover {
+.end-btn:hover {
     background-color: #12db34;
     color: #1d1d1d;
 }
 
-#cancel-btn:hover {
+.cancel-btn:hover {
     background-color: #df0d0d;
     color: #1d1d1d;
 }
-
 
 .hide {
     display: none;
@@ -127,7 +126,15 @@ h3 {
 
 .done {
     background-color: #3c4e67;
-    color: #1d1d1d;
+    color: #ffffff;
+    text-decoration: line-through;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+.done button {
+    background-color: #3c4e67;
+    color: #ffffff;
     text-decoration: line-through;
     font-style: italic;
     border-radius: 5px;
